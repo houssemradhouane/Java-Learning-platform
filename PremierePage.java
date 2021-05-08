@@ -14,7 +14,7 @@ public class PremierePage extends JPanel {
          setBackground(Color.DARK_GRAY);
          window.setContentPane(this);
          
-         themes = new JButton ("Thèmes");
+         themes = new JButton ("Jouer");
          themes.setBackground(new Color(255,255,255)) ;
          themes.setBounds(300,150,200,50);
          add(themes);
