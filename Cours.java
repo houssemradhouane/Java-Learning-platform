@@ -13,7 +13,7 @@ public class Cours extends JFrame {
 
         /* Creer un JPanel pour contenir le cours */
 	void createPan(JLabel border,JPanel panel) {
-		  setSize(600,500);
+              setSize(600,500);
 	      setLocationRelativeTo(null);
 	      setResizable(false);
 	      panel.setSize(this.getSize().width,this.getSize().height);
@@ -28,7 +28,7 @@ public class Cours extends JFrame {
 	
 	Cours (int numero) {
 	      JLabel border = new JLabel();
-          JPanel panel = new JPanel();
+              JPanel panel = new JPanel();
 
 	      switch( numero) {
 	      case 1 : createPan(border,panel);
@@ -63,9 +63,6 @@ public class Cours extends JFrame {
                         setVisible(true);
 	               
 	      }
-	   
-
-
-	      }
-	  }
+	}
+}
 
