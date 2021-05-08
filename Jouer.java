@@ -52,7 +52,7 @@ public class Jouer {
 	                    if (nbr1 == quiz_theme.length-1 || (s==time)) { quiz.Reset();}
 	                     nbr1++ ;
 	                }
-	               ;
+	             
 	           //Qrc
 	           while (nbr2 != qrcs.length  ) {
                    QrcFrame quiz = new QrcFrame(qrcs[nbr2], window);
