@@ -1,7 +1,6 @@
 /**
  * 
  * @author Salahdine Ouhmmiali v 1.0
- *
  */
 public class Compteur {
 	int M,S,Ms;
