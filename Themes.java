@@ -4,9 +4,7 @@ import java.awt.* ;
 import javax.swing.border.LineBorder;
 import javax.swing.border.SoftBevelBorder;
 /**
- * 
  * @author Salahdine Ouhmmiali v 1.0
- *
  */
 /* Afficher les thèmes sur l'interface graphique */
 public class Themes extends JPanel {
