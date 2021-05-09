@@ -4,7 +4,6 @@ import java.awt.* ;
 import javax.swing.border.LineBorder;
 import javax.swing.border.SoftBevelBorder;
 /**
- * 
  * @author Salahdine Ouhmmiali v 1.0
  *
  */
