@@ -1,5 +1,4 @@
-/*
-Construires les questions pour les test */
+/*Construires les questions pour les test */
 public class Quizs {
         /* Construire les Qcm du jeu */
 	public Qcm[] quizQcm() {
