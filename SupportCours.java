@@ -6,6 +6,7 @@ import javax.swing.border.SoftBevelBorder;
 /**
  * @author Salahdine Ouhmmiali v 1.0
  */
+
 public class SupportCours extends JPanel {
 	JButton tests,cours,quitter;
     static boolean go  = false ;
