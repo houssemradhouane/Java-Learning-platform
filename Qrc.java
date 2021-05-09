@@ -12,5 +12,4 @@ public class Qrc implements Question {
 	public String getReponse() {
 		return reponse;
 	}
-
 }
