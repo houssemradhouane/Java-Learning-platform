@@ -5,7 +5,7 @@
  */
 public class Compteur {
 	int M,S,Ms;
-	 Compteur() {
+        Compteur() {
 	       M=0;S=0;Ms=0; 
-	    }
+        }
 }
