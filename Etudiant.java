@@ -43,5 +43,5 @@ public class Etudiant implements Utilisateur {
          * @param identifiant de l'enseignant
          */
        public void inscrire(String identifiant) {
-              if (BaseDD.enseignantExistant(identifiant)) {
+              if (BaseDD.utilisateurExistant(identifiant)) {
                  

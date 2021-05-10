@@ -5,8 +5,8 @@ import java.sql.SQLException;
 import java.sql.Statement;
 
 /**
- * BaseDD modélise une base de données et ses opérations de bases. Elle permet
- * de faire la connexion avec une base de données d'ajouter, consulter, vérifier
+ * BaseDD modélise une base de données et ses opérations de bases.
+ * Elle permet de faire la connexion avec une base de données d'ajouter, consulter, vérifier
  * et mettre à jour ses informations.
  *
  * @author Houssem Radhouane
