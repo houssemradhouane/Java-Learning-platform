@@ -6,9 +6,7 @@ import java.awt.* ;
 import javax.swing.border.LineBorder;
 import javax.swing.border.SoftBevelBorder;
 /**
- * 
- * @author Salahdine Ouhmmiali v 1.0
- *
+ * @author Salahdine Ouhmmiali
  */
 /* La classe main */
 public class Jouer {
