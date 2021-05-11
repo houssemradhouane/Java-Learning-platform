@@ -26,8 +26,6 @@ public class Jouer {
 	          int time = 60 ; //sec 
 	          PremierePage premierepage = new PremierePage(window);
 	          premierepage.choose();
-	          //SupportCours pagePrincipale = new SupportCours (window);
-	          //pagePrincipale.choose();
 	          Themes themes = new Themes(window);
 	          themes.choose();
                   // numero du theme choisi par l'utilisateur
