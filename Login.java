@@ -27,7 +27,7 @@ public class Login extends JFrame implements ActionListener {
       message = new JLabel();
       panel.add(message);
       panel.add(submit);
-      setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+      //setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
       // Adding the listeners to components..
       submit.addActionListener(this);
       add(panel, BorderLayout.CENTER);
@@ -43,7 +43,7 @@ public class Login extends JFrame implements ActionListener {
       String userName = userName_text.getText();
       @SuppressWarnings("deprecation")
 	String password = password_text.getText();
-      if (userName.trim().equals("admin") && password.trim().equals("admin")) {
+      if (base.authentifier(userName, password)) {
          message.setText(" Hello " + userName + "");
       } else {
          message.setText(" Invalid user.. ");
