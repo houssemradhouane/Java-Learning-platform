@@ -25,24 +25,21 @@ public class Themes extends JPanel {
         add(th1);
         th2 = new JButton ("Chaines de caractère : String");
         th2.setBackground(new Color(255,255,255)) ;
-        th2.setBounds(300,100,200,50);
+        th2.setBounds(300,110,200,50);
         add(th2);
         th3 = new JButton ("Tableaux");
         th3.setBackground(new Color(255,255,255)) ;
-        th3.setBounds(300,150,200,50);
+        th3.setBounds(300,170,200,50);
         add(th3);
         th4 = new JButton ("Exception");
         th4.setBackground(new Color(255,255,255)) ;
-        th4.setBounds(300,200,200,50);
+        th4.setBounds(300,230,200,50);
         add(th4);
         th5 = new JButton ("Collections");
         th5.setBackground(new Color(255,255,255)) ;
-        th5.setBounds(300,250,200,50);
+        th5.setBounds(300,290,200,50);
         add(th5);
-        th6 = new JButton ("");
-        th6.setBackground(new Color(255,255,255)) ;
-        th6.setBounds(300,300,200,50);
-        add(th6);
+        
     	
     }
 /* Ajouter les actions pour chaque boutton */
