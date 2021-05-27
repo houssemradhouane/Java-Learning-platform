@@ -35,9 +35,11 @@ public class Jouer {
                    // Tous les qcm du jeu .
 	           Qcm [] quiz_All = quizs.quizQcm();
                    // les qcm du thème choisi par l'utilisateur 
-	           Qcm [] quiz_theme = Arrays.copyOfRange(quiz_All, numero-1, numero);
+	           Qcm [] quiz_theme = Arrays.copyOfRange(quiz_All, (numero-1)*4, numero*4);
                    // tous les qrc du jeu 
 	           Qrc [] qrcs= quizs.quizQrc();
+		   Qrc [] qrcs_theme= Arrays.copyOfRange(qrcs, numero-1, numero);
+
                        // Qcm 
 	               while (nbr1 != quiz_theme.length  ) {
 	                    QcmFrame quiz = new QcmFrame(quiz_theme[nbr1], window);
@@ -50,17 +52,17 @@ public class Jouer {
 	                }
 	             
 	           //Qrc
-	           while (nbr2 != qrcs.length  ) {
-                   QrcFrame quiz = new QrcFrame(qrcs[nbr2], window);
+	           while (nbr2 != qrcs_theme.length  ) {
+                   QrcFrame quiz = new QrcFrame(qrcs_theme[nbr2], window);
                    quiz.getAnswer(time);
                    m = quiz.getTime().M ;
                    s = quiz.getTime().S ;
                    score2 = quiz.getScore();
-                   if (nbr2 == qrcs.length-1 || (s==time)) { quiz.Reset();}
+                   if (nbr2 == qrcs_theme.length-1 || (s==time)) { quiz.Reset();}
                     nbr2++ ;
                }
                // nb total du question du test passé
-               int nbrQ = qrcs.length + quiz_theme.length ;
+               int nbrQ = qrcs_theme.length + quiz_theme.length ;
                // score total du test passé
                int score = score1 + score2;
                // Afficahe du score sur l'interface graphique
