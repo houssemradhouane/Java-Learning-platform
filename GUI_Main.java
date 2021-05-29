@@ -13,10 +13,9 @@ public class GUI_Main extends JPanel {
     private Themes th = new Themes();
     private String themes[][]= th.themes;
 
-    private JPanel tabs = new JPanel();
+    private JPanel tabs = new JPanel(new CardLayout());
 
-    GUI_Main() {
-        
+    GUI_Main() {        
         initComponents();        
     }
 
@@ -74,11 +73,13 @@ public class GUI_Main extends JPanel {
         
 
         //Tabs to access courses, exercises or questions
-        tabs.setLayout(new CardLayout());
         tabs.setBorder(BorderFactory.createEtchedBorder(EtchedBorder.RAISED));
 
-        // JTabbedPane tabs = new JTabbedPane();
-        // tabs.setTabPlacement(JTabbedPane.TOP);
+        JTabbedPane typeDonnees = new JTabbedPane();
+        JEditorPane coursTypeDonnees = new Cours(themes[0][0]);
+        typeDonnees.addTab("Cours", coursTypeDonnees);
+        tabs.add(themes[0][0], typeDonnees);
+        
         
         //Separation of the 2 main components
         JSplitPane mainSeparator = new JSplitPane(JSplitPane.HORIZONTAL_SPLIT, scrollTree, tabs);
