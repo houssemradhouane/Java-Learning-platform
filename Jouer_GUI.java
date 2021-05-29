@@ -5,10 +5,6 @@
  *               the GUI is a JFrame using various JPanel
  */
 
-//TODO implementation with other classes
-//TODO menu wasn't working, showing only big icons
-
-
 import java.awt.*;
 import javax.swing.*;
 import com.formdev.flatlaf.*;
@@ -24,33 +20,31 @@ public class Jouer_GUI extends JFrame {
             System.err.println( "Failed to initialize LookAndFeel," );
             System.err.println( "check that the flatlaf-1.1.2.jar is referenced in classpath." );
         }
+        setTitle("Apprendre Java");
+        setSize(800,600);
+        getContentPane().setBackground(Color.DARK_GRAY);
+        setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+
+        ImageIcon icone = new ImageIcon("images/icon.png");
+        setIconImage(icone.getImage());
         
         // different windows of the application
         // better to use panels than multiple frames
         // CardLayout is used to swap from one to another
-        JPanel main_GUI = new Main_GUI();      
+        JPanel GUI_Main = new GUI_Main();      
 
-        CardLayout layout = new CardLayout();
+        CardLayout layout = new CardLayout(10,10);   
         setLayout(layout);
         
-        add("Main", main_GUI);
-        //layout.next(getContentPane());
-        //svn co http://cregut.svn.enseeiht.fr/2020/1sn/tob/pl/XX-N
+        add("Main", GUI_Main);
         
-        setTitle("Apprendre Java");
-        setSize(800,600);
-
-        ImageIcon icone = new ImageIcon("images/icon.png");
-        setIconImage(icone.getImage());
-
-        layout.first(getContentPane());
-
-        setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+        layout.show(getContentPane(), "Main");
+        
         setVisible(true);
     }
 
     public static void main(String[] args) {
-        JFrame frame = new Jouer_GUI();
+        new Jouer_GUI();
     }
 
 }
