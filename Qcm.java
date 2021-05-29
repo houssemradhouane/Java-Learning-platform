@@ -9,14 +9,16 @@ public class Qcm implements Question {
 	       option2,
 	       option3,
 	       option4,
-	       reponse_correcte;
-	 Qcm(String question , String op1 , String op2 ,String op3, String op4 , String reponse_correcte) {
+	       reponse_correcte,
+		   theme;
+	 Qcm(String question , String op1 , String op2 ,String op3, String op4 , String reponse_correcte, String theme) {
 	        this.question = question ;
 	        this.option1 = op1;
 	        this.option2= op2;
 	        this.option3 = op3 ;
 	        this.option4 = op4 ;
 	        this.reponse_correcte = reponse_correcte ;
+			this.theme = theme;
 	    }
 	public String getQuestion() {
 		return question;
@@ -24,6 +26,9 @@ public class Qcm implements Question {
 	public String getReponse() {
 		return reponse_correcte;
 	}
+	public String getTheme() {
+		return theme;
+	};
 
 	
 

@@ -42,8 +42,4 @@ public class Jouer_GUI extends JFrame {
         
         setVisible(true);
     }
-
-    public static void main(String[] args) {
-        new Jouer_GUI();
-    }
 }
