@@ -23,6 +23,7 @@ public class GUI_Main extends JPanel {
 
         CardLayout cl = (CardLayout) (tabs.getLayout());
         cl.show(tabs, newTheme);
+        System.out.println(newTheme);
 
     }
 
@@ -77,6 +78,15 @@ public class GUI_Main extends JPanel {
         typeDonnees.addTab("Cours", coursTypeDonnees);
         tabs.add(themes[0][0], typeDonnees);
 
+        JTabbedPane chaineCaractere = new JTabbedPane();
+        JEditorPane coursChaineCaractere = new Cours(themes[0][1]);
+        chaineCaractere.addTab("Cours", coursChaineCaractere);
+        tabs.add(themes[0][1], chaineCaractere);
+
+        JTabbedPane tableaux = new JTabbedPane();
+        JEditorPane coursTableaux = new Cours(themes[0][2]);
+        tableaux.addTab("Cours", coursTableaux);
+        tabs.add(themes[0][2], tableaux);
         
 
         // Separation of the 2 main components

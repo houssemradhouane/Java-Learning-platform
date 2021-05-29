@@ -44,4 +44,6 @@ public class Etudiant implements Utilisateur {
          */
        public void inscrire(String identifiant) {
               if (BaseDD.utilisateurExistant(identifiant)) {
+            	  
+              }
                  

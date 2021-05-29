@@ -105,6 +105,25 @@ public class BaseUtilisateurs {
     }
     
     /**
+	 * Authentifie un étudiant à partir de son username et mot de passe.
+	 * 
+	 * @param usern l'identifiant
+	 * @param pwd mot de passe
+	 * @return true si l'identifiant est utilisé par un enseignant
+	 */
+    public boolean authentifier(String usern, String pwd) {
+    	try {
+    	  ResultSet resultset = Base.select("SELECT * FROM users.etudiant,users.enseignant WHERE (users.etudiant.identifiant = '" + usern+"' AND users.etudiant.mdp = '"+ pwd +"')"
+    			                                                                                 + " OR (users.enseignant.identifiant = '" + usern+"' AND users.enseignant.mdp = '"+ pwd +"')");
+    	  return (resultset.next());
+    	} catch(SQLException e) {
+    		System.out.println(e.getMessage());
+    	    return false;	
+    	}
+    }
+    
+    
+    /**
 	 * Se déconnecter de la base de données utilisateurs
 	 */
 	public void disconnect() {
