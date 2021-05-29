@@ -15,6 +15,13 @@ public class GUI_Main extends JPanel {
 
     private static JPanel tabs = new JPanel(new CardLayout());
 
+    JTabbedPane typeDonnees = new JTabbedPane();
+    JTabbedPane chaineCaractere = new JTabbedPane();
+    JTabbedPane tableaux = new JTabbedPane();    
+    JTabbedPane exceptions = new JTabbedPane();    
+    JTabbedPane collections = new JTabbedPane();    
+
+
     GUI_Main() {
         initComponents();
     }
@@ -53,6 +60,43 @@ public class GUI_Main extends JPanel {
         return treeThemes;
     }
 
+    private void buildCours() {
+        JEditorPane coursTypeDonnees = new Cours(themes[0][0]);
+        typeDonnees.addTab("Cours", coursTypeDonnees);
+        tabs.add(themes[0][0], typeDonnees);
+
+        JEditorPane coursChaineCaractere = new Cours(themes[0][1]);
+        chaineCaractere.addTab("Cours", coursChaineCaractere);
+        tabs.add(themes[0][1], chaineCaractere);
+
+        JEditorPane coursTableaux = new Cours(themes[0][2]);
+        tableaux.addTab("Cours", coursTableaux);
+        tabs.add(themes[0][2], tableaux);
+
+        JEditorPane coursExceptions = new Cours(themes[1][0]);
+        exceptions.addTab("Cours", coursExceptions);
+        tabs.add(themes[1][0], exceptions);
+
+        JEditorPane coursCollections = new Cours(themes[2][0]);
+        collections.addTab("Cours", coursCollections);
+        tabs.add(themes[2][0], collections);
+    }
+
+
+    private void buildQcm(Quizs quizs) {
+
+        Qcm [] quiz_All = quizs.quizQcm();
+
+        for (int i=0; i<quiz_All.length; i++) {
+            
+        }
+
+    }
+
+
+    private void buildQrc() {
+    }
+
     private void initComponents() {
         setLayout(new BorderLayout());
 
@@ -73,21 +117,12 @@ public class GUI_Main extends JPanel {
         // Tabs to access courses, exercises or questions
         tabs.setBorder(BorderFactory.createEtchedBorder(EtchedBorder.RAISED));
 
-        JTabbedPane typeDonnees = new JTabbedPane();
-        JEditorPane coursTypeDonnees = new Cours(themes[0][0]);
-        typeDonnees.addTab("Cours", coursTypeDonnees);
-        tabs.add(themes[0][0], typeDonnees);
+        buildCours();
 
-        JTabbedPane chaineCaractere = new JTabbedPane();
-        JEditorPane coursChaineCaractere = new Cours(themes[0][1]);
-        chaineCaractere.addTab("Cours", coursChaineCaractere);
-        tabs.add(themes[0][1], chaineCaractere);
+        Quizs quizs = new Quizs();
 
-        JTabbedPane tableaux = new JTabbedPane();
-        JEditorPane coursTableaux = new Cours(themes[0][2]);
-        tableaux.addTab("Cours", coursTableaux);
-        tabs.add(themes[0][2], tableaux);
-        
+        buildQcm(quizs);
+        buildQrc(quizs);        
 
         // Separation of the 2 main components
         JSplitPane mainSeparator = new JSplitPane(JSplitPane.HORIZONTAL_SPLIT, scrollTree, tabs);

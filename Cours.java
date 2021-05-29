@@ -43,6 +43,9 @@ public class Cours extends JEditorPane {
 			+ "tableau[indice] = valeur; avec indice qui va de 0 à taille -1 ."
 			+ "<br> On peut déclaré et initialisé un tableau directement par :"
 			+ "<br> elementType[] tableau = {v1,v2,v3,v4}; </html>";
+	
+	private String coursExceptions = "Cours non écrit !"
+	private String coursCollections = "Cours non écrit !"
 
 	Cours(String theme) {
 
@@ -57,6 +60,12 @@ public class Cours extends JEditorPane {
 		}
 		else if (theme.equals(themes[0][2])) {
 			setText(coursTableaux);
+		}
+		else if (theme.equals(themes[1][0])) {
+			setText(coursExceptions);
+		}
+		else if (theme.equals(themes[2][0])) {
+			setText(coursCollections);
 		}
 
 		setFont(new Font("Verdana", Font.PLAIN, 15));

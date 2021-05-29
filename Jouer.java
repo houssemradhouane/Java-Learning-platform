@@ -16,7 +16,6 @@ public class Jouer {
 		// Après connexion on lance l'interface principale
 		JFrame window = new Jouer_GUI();
 
-		while(true) {
 		// nbr1, nbr2 : numéro de la question dans qcm ou qrc
 		// score1, score2 : les scores dans qcm et qrc
 		int nbr1 =0 ,nbr2=0, score1=0 , m=0 , s=0,score2=0 ;
