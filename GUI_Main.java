@@ -11,21 +11,24 @@ import javax.swing.tree.*;
 
 public class GUI_Main extends JPanel {
     private Themes th = new Themes();
-    private String themes[][]= th.themes;
+    private String themes[][] = th.themes;
 
-    private JPanel tabs = new JPanel(new CardLayout());
+    private static JPanel tabs = new JPanel(new CardLayout());
 
-    GUI_Main() {        
-        initComponents();        
+    GUI_Main() {
+        initComponents();
     }
 
     public static void themeSwitch(String newTheme) {
-        
+
+        CardLayout cl = (CardLayout) (tabs.getLayout());
+        cl.show(tabs, newTheme);
+
     }
 
     private DefaultMutableTreeNode buildTree() {
         DefaultMutableTreeNode treeThemes = new DefaultMutableTreeNode("Thèmes");
-        
+
         DefaultMutableTreeNode basique = new DefaultMutableTreeNode("Basique");
         DefaultMutableTreeNode intermediaire = new DefaultMutableTreeNode("Intermédiaire");
         DefaultMutableTreeNode avance = new DefaultMutableTreeNode("Avancé");
@@ -38,28 +41,24 @@ public class GUI_Main extends JPanel {
         basique.add(chaineCaracteres);
         basique.add(tableaux);
 
-
         treeThemes.add(intermediaire);
         DefaultMutableTreeNode exceptions = new DefaultMutableTreeNode(themes[1][0]);
         intermediaire.add(exceptions);
-        
 
         treeThemes.add(avance);
         DefaultMutableTreeNode collections = new DefaultMutableTreeNode(themes[2][0]);
         avance.add(collections);
-        
-        
+
         return treeThemes;
     }
 
     private void initComponents() {
         setLayout(new BorderLayout());
 
-        //Build the tree
+        // Build the tree
         DefaultMutableTreeNode treeThemes = buildTree();
 
-
-        //Tree to navigate between themes
+        // Tree to navigate between themes
         JTree tree = new JTree(treeThemes);
         tree.getSelectionModel().setSelectionMode(TreeSelectionModel.SINGLE_TREE_SELECTION);
         tree.setToggleClickCount(1);
@@ -68,24 +67,23 @@ public class GUI_Main extends JPanel {
         tree.addTreeSelectionListener(treeListener);
 
         JScrollPane scrollTree = new JScrollPane(tree);
-        scrollTree.setMinimumSize(new Dimension(200,150));       
+        scrollTree.setMinimumSize(new Dimension(200, 150));
 
-        
-
-        //Tabs to access courses, exercises or questions
+        // Tabs to access courses, exercises or questions
         tabs.setBorder(BorderFactory.createEtchedBorder(EtchedBorder.RAISED));
 
         JTabbedPane typeDonnees = new JTabbedPane();
         JEditorPane coursTypeDonnees = new Cours(themes[0][0]);
         typeDonnees.addTab("Cours", coursTypeDonnees);
         tabs.add(themes[0][0], typeDonnees);
+
         
-        
-        //Separation of the 2 main components
+
+        // Separation of the 2 main components
         JSplitPane mainSeparator = new JSplitPane(JSplitPane.HORIZONTAL_SPLIT, scrollTree, tabs);
         mainSeparator.setResizeWeight(0.1);
-        
+
         add(mainSeparator);
     }
-    
+
 }

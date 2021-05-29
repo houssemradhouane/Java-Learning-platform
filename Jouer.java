@@ -7,18 +7,13 @@ import javax.swing.border.LineBorder;
 import javax.swing.border.SoftBevelBorder;
 
 /**
- * @author Salahdine Ouhmmiali
+ * @author Salahdine Ouhmmiali v1.0, Flavien Mithieux v1.1
  */
 /* La classe main */
 public class Jouer {
 	public static void main(String[] args) throws InterruptedException {
 		JFrame window = new Jouer_GUI();
 
-		// JFrame window = new JFrame ("Jeu Java") ;
-		// window.setSize(800,500);
-		// window.setLocationRelativeTo(null);
-		// window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		// window.setResizable(false);
 		// while(true) {
 		// // nbr1, nbr2 : numéro de la question dans qcm ou qrc
 		// // score1, score2 : les scores dans qcm et qrc
