@@ -44,8 +44,8 @@ public class Cours extends JEditorPane {
 			+ "<br> On peut déclaré et initialisé un tableau directement par :"
 			+ "<br> elementType[] tableau = {v1,v2,v3,v4}; </html>";
 	
-	private String coursExceptions = "Cours non écrit !"
-	private String coursCollections = "Cours non écrit !"
+	private String coursExceptions = "Cours non écrit !";
+	private String coursCollections = "Cours non écrit !";
 
 	Cours(String theme) {
 

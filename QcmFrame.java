@@ -1,8 +1,7 @@
 import java.awt.event.ActionEvent;
 import javax.swing.*;
 import java.awt.* ;
-import javax.swing.border.LineBorder;
-import javax.swing.border.SoftBevelBorder;
+import javax.swing.border.*;
 /**
  * 
  * @author Salahdine Ouhmmiali v 1.0
@@ -26,7 +25,7 @@ static JLabel timer = new JLabel ("00 : 00 : 000") ;
 static Compteur count = new Compteur ();
 
 /* Constructeur de la frame QcmFrame */
-QcmFrame (Qcm obj , JFrame window) {
+QcmFrame (Qcm obj) {
        
  Q = new JLabel (obj.question); // La question
  option1 = new JButton (obj.option1) ; // les choix 
@@ -34,17 +33,9 @@ QcmFrame (Qcm obj , JFrame window) {
  option3 = new JButton (obj.option3) ;
  option4 = new JButton (obj.option4) ;
  reponse_correcte = obj.reponse_correcte ; // la réponse correcte
-
- JPanel pan = new JPanel () ;     
- pan.setLayout(null);
- pan.setBorder(BorderFactory.createLineBorder(Color.gray));
- pan.setBackground(Color.DARK_GRAY);
- window.setContentPane(pan);
+ setBackground(Color.DARK_GRAY);
  setLayout(null);
- setBackground(Color.getHSBColor(154, 254, 25));
- setBounds(100,90,600,300);
- setBorder(BorderFactory.createLineBorder(Color.black));
- pan.add(this);
+ 
  
  add(Q); add(option1); add(option2); add(option3); add(option4);
  
@@ -64,9 +55,8 @@ QcmFrame (Qcm obj , JFrame window) {
  timer.setHorizontalAlignment(JLabel.CENTER);
  timer.setBorder(BorderFactory.createLineBorder(Color.white));
  timer.setForeground(Color.white);
- pan.add(timer);
- 
- window.setVisible(true);              
+ add(timer);
+              
 }
 /*Valider la réponse de l'utilisateur */
 void getAnswer (int time) throws InterruptedException {

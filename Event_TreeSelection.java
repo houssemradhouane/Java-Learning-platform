@@ -5,10 +5,7 @@
 *
 */
 
-import java.awt.*;
-import javax.swing.*;
 import javax.swing.event.*;
-import javax.swing.tree.*;
 
 public class Event_TreeSelection implements TreeSelectionListener {
 

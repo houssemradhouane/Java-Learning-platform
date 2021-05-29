@@ -1,3 +1,4 @@
+
 /**
  * GUI_Main
  * @author Flavien Mithieux
@@ -17,10 +18,9 @@ public class GUI_Main extends JPanel {
 
     JTabbedPane typeDonnees = new JTabbedPane();
     JTabbedPane chaineCaractere = new JTabbedPane();
-    JTabbedPane tableaux = new JTabbedPane();    
-    JTabbedPane exceptions = new JTabbedPane();    
-    JTabbedPane collections = new JTabbedPane();    
-
+    JTabbedPane tableaux = new JTabbedPane();
+    JTabbedPane exceptions = new JTabbedPane();
+    JTabbedPane collections = new JTabbedPane();
 
     GUI_Main() {
         initComponents();
@@ -30,7 +30,6 @@ public class GUI_Main extends JPanel {
 
         CardLayout cl = (CardLayout) (tabs.getLayout());
         cl.show(tabs, newTheme);
-        System.out.println(newTheme);
 
     }
 
@@ -82,19 +81,60 @@ public class GUI_Main extends JPanel {
         tabs.add(themes[2][0], collections);
     }
 
-
     private void buildQcm(Quizs quizs) {
 
-        Qcm [] quiz_All = quizs.quizQcm();
+        Qcm[] quiz_All = quizs.quizQcm();
 
-        for (int i=0; i<quiz_All.length; i++) {
-            
+        for (int i = 0; i < quiz_All.length; i++) {
+            if (quiz_All[i].getTheme().equals(themes[0][0])) {
+                JPanel pan = new QcmFrame(quiz_All[i]);
+                typeDonnees.addTab("QCM", pan);
+            }
+            else if (quiz_All[i].getTheme().equals(themes[0][1])) {
+                JPanel pan = new QcmFrame(quiz_All[i]);
+                chaineCaractere.addTab("QCM", pan);
+            }
+            else if (quiz_All[i].getTheme().equals(themes[0][2])) {
+                JPanel pan = new QcmFrame(quiz_All[i]);
+                tableaux.addTab("QCM", pan);
+            }
+            else if (quiz_All[i].getTheme().equals(themes[1][0])) {
+                JPanel pan = new QcmFrame(quiz_All[i]);
+                exceptions.addTab("QCM", pan);
+            }
+            else if (quiz_All[i].getTheme().equals(themes[2][0])) {
+                JPanel pan = new QcmFrame(quiz_All[i]);
+                collections.addTab("QCM", pan);
+            }
         }
 
     }
 
+    private void buildQrc(Quizs quizs) {
+        Qrc[] quiz_All = quizs.quizQrc();
 
-    private void buildQrc() {
+        for (int i = 0; i < quiz_All.length; i++) {
+            if (quiz_All[i].getTheme().equals(themes[0][0])) {
+                JPanel pan = new QrcFrame(quiz_All[i]);
+                typeDonnees.addTab("QRC", pan);
+            }
+            else if (quiz_All[i].getTheme().equals(themes[0][1])) {
+                JPanel pan = new QrcFrame(quiz_All[i]);
+                chaineCaractere.addTab("QRC", pan);
+            }
+            else if (quiz_All[i].getTheme().equals(themes[0][2])) {
+                JPanel pan = new QrcFrame(quiz_All[i]);
+                tableaux.addTab("QRC", pan);
+            }
+            else if (quiz_All[i].getTheme().equals(themes[1][0])) {
+                JPanel pan = new QrcFrame(quiz_All[i]);
+                exceptions.addTab("QRC", pan);
+            }
+            else if (quiz_All[i].getTheme().equals(themes[2][0])) {
+                JPanel pan = new QrcFrame(quiz_All[i]);
+                collections.addTab("QRC", pan);
+            }
+        }
     }
 
     private void initComponents() {
@@ -122,7 +162,7 @@ public class GUI_Main extends JPanel {
         Quizs quizs = new Quizs();
 
         buildQcm(quizs);
-        buildQrc(quizs);        
+        buildQrc(quizs);
 
         // Separation of the 2 main components
         JSplitPane mainSeparator = new JSplitPane(JSplitPane.HORIZONTAL_SPLIT, scrollTree, tabs);
