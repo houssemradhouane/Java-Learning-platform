@@ -34,6 +34,7 @@ public class Cours extends JFrame {
 	      case 1 : createPan(border,panel);
 	               JLabel cour = new JLabel("<html> * On distingue deux genres de  types de données sur Java :\n" + 
 	               		"<br> -Types primitifs : byte, short, int, long, float, double,boolean et char.\n" + 
+<<<<<<< Updated upstream
 	               		"<br> -Types non-primitifs : String, Arrays, Classes …\n" + 
 	               		"<br>"+
 	               		"<br>"+
@@ -43,16 +44,36 @@ public class Cours extends JFrame {
 	               		"<br> -int : stocke les entiers jusqu’à  10 digits.\n" + 
 	               		"<br> -double & float : pour stocker les nombres à virgule flottante.\n" + 
 	               		"<br> -char: stocke les caractères (lettres, signes ou nombres).\n" + 
+=======
+	               		"<br> -Types non-primitifs : String, Arrays, Classes â€¦\n" + 
+	               		"<br>"+
+	               		"<br>"+
+	               		"<br> * Types de donnÃ©es primitifs de base:\n" +
+	               		"<br>"+
+	               		"<br> -byte :  stocke les nombres entre -128 Ã  127.\n" + 
+	               		"<br> -int : stocke les entiers jusqu'à   10 digits.\n" + 
+	               		"<br> -double & float : pour stocker les nombres Ã  virgule flottante.\n" + 
+	               		"<br> -char: stocke les caractÃ¨res (lettres, signes ou nombres).\n" + 
+>>>>>>> Stashed changes
 	               		"<br> -boolean : type logique qui prend les valeurs true et false.\n" + 
 	               		"<br>"+
 	               		"<br>"+
 	               		"<br> * Strings\n" + 
+<<<<<<< Updated upstream
 	               		"<br>  Les chaînes de caractères sur Java sont de type string.\n" + 
 	               		"<br>"+	               	
 	               		"<br>Exemples :\n" +	               		
 	               		"<br>String sequence = “ This is a string” ;\n" + 
 	               		"<br> String concat = “ This” + “string” \n" + 
 	               		"                                   + “is” + “concatenated” ;\n" + 
+=======
+	               		"<br>  Les chaÃ®nes de caractÃ¨res sur Java sont de type string.\n" + 
+	               		"<br>"+	               	
+	               		"<br>Exemples :\n" +	               		
+	               		"<br>String sequence = â€œ This is a stringâ€� ;\n" + 
+	               		"<br> String concat = â€œ Thisâ€� + â€œstringâ€� \n" + 
+	               		"                                   + â€œisâ€� + â€œconcatenatedâ€� ;\n" + 
+>>>>>>> Stashed changes
 	               		"\n" + 
 	               		"\n" + 
 	               		"</html>");

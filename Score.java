@@ -29,10 +29,13 @@ recommencer .setBackground(new Color(255,255,255)) ;
 recommencer .setBounds(300,250,200,50);
 add(recommencer);
 
+<<<<<<< Updated upstream
 quitter = new JButton ("Exit");
 quitter.setBackground(new Color(255,255,255)) ;
 quitter.setBounds(300,350,200,50);
 add(quitter);
+=======
+>>>>>>> Stashed changes
 
 scoreLabel = new JLabel ("You Got : "+score+"/"+nbrQ);
 scoreLabel.setHorizontalAlignment(JLabel.CENTER);
@@ -52,9 +55,12 @@ recommencer.addActionListener((ActionEvent e) -> {
     again= true ;
 });
 
+<<<<<<< Updated upstream
 quitter.addActionListener((ActionEvent e) -> {
     System.exit(0);
 });
+=======
+>>>>>>> Stashed changes
 
 while (!again) {
     try {        

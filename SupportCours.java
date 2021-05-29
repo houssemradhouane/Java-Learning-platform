@@ -23,6 +23,7 @@ public class SupportCours extends JPanel {
          tests.setBackground(new Color(255,255,255)) ;
          tests.setBounds(300,100,200,50);
          add(tests);
+<<<<<<< Updated upstream
          /* Bouton pour aller vers le cours */
          cours = new JButton ("Cours");
          cours.setBackground(new Color(255,255,255)) ;
@@ -33,6 +34,8 @@ public class SupportCours extends JPanel {
          quitter.setBackground(new Color(255,255,255)) ;
          quitter.setBounds(300,300,200,50);
          add(quitter);
+=======
+>>>>>>> Stashed changes
          
          window.setVisible(true);
          
@@ -45,6 +48,7 @@ void choose () {
             setVisible(false);
             cour=false;
         });
+<<<<<<< Updated upstream
         cours.addActionListener((ActionEvent e) -> {
             cour  = true; 
             new Cours(numero);
@@ -53,6 +57,9 @@ void choose () {
             System.exit(0);
         });
         
+=======
+       
+>>>>>>> Stashed changes
         while (!go) {
             try {
                 Thread.sleep(0);

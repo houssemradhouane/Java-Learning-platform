@@ -41,7 +41,11 @@ QcmFrame (Qcm obj , JFrame window) {
  pan.setBackground(Color.DARK_GRAY);
  window.setContentPane(pan);
  setLayout(null);
+<<<<<<< Updated upstream
  setBackground(Color.getHSBColor(154, 254, 25));
+=======
+ setBackground(Color.LIGHT_GRAY);
+>>>>>>> Stashed changes
  setBounds(100,90,600,300);
  setBorder(BorderFactory.createLineBorder(Color.black));
  pan.add(this);
@@ -49,7 +53,11 @@ QcmFrame (Qcm obj , JFrame window) {
  add(Q); add(option1); add(option2); add(option3); add(option4);
  
  Q.setBounds(40,8,520,150);
+<<<<<<< Updated upstream
  Q.setBorder(new LineBorder(Color.blue, 2, true));
+=======
+ Q.setBorder(new LineBorder(Color.white, 2, true));
+>>>>>>> Stashed changes
  Q.setHorizontalAlignment(JLabel.CENTER);
  option1.setBounds(80,180,200,40); option1.setBackground(new Color(255,255,255)) ; 
  option2.setBounds(80,240,200,40); option2.setBackground(new Color(255,255,255)) ;

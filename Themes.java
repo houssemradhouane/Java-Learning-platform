@@ -8,10 +8,17 @@ import javax.swing.border.SoftBevelBorder;
  * @author Salahdine Ouhmmiali v 1.0
  *
  */
+<<<<<<< Updated upstream
 /* Afficher les thÃ¨mes sur l'interface graphique */
 public class Themes extends JPanel {
 	JButton th1,th2,th3,th4,th5,th6;
 	static int numero; // pour dÃ©signer le theme choisi par l'utilisateur
+=======
+/* Afficher les thèmes sur l'interface graphique */
+public class Themes extends JPanel {
+	JButton th1,th2,th3,th4,th5,th6;
+	static int numero; // pour désigner le theme choisi par l'utilisateur
+>>>>>>> Stashed changes
         static boolean go  = false ;
   /*  Constructeur de la frame Themes */
     Themes(JFrame window){
@@ -19,6 +26,7 @@ public class Themes extends JPanel {
         setLayout(null);
         setBackground(Color.DARK_GRAY);
         window.setContentPane(this);
+<<<<<<< Updated upstream
         th1 = new JButton ("Types de donnÃ©es");
         th1.setBackground(new Color(255,255,255)) ;
         th1.setBounds(300,50,200,50);
@@ -43,6 +51,29 @@ public class Themes extends JPanel {
         th6.setBackground(new Color(255,255,255)) ;
         th6.setBounds(300,300,200,50);
         add(th6);
+=======
+        th1 = new JButton ("Types de données");
+        th1.setBackground(new Color(255,255,255)) ;
+        th1.setBounds(300,50,200,50);
+        add(th1);
+        th2 = new JButton ("Chaines de caractère : String");
+        th2.setBackground(new Color(255,255,255)) ;
+        th2.setBounds(300,110,200,50);
+        add(th2);
+        th3 = new JButton ("Tableaux");
+        th3.setBackground(new Color(255,255,255)) ;
+        th3.setBounds(300,170,200,50);
+        add(th3);
+        th4 = new JButton ("Exception");
+        th4.setBackground(new Color(255,255,255)) ;
+        th4.setBounds(300,230,200,50);
+        add(th4);
+        th5 = new JButton ("Collections");
+        th5.setBackground(new Color(255,255,255)) ;
+        th5.setBounds(300,290,200,50);
+        add(th5);
+        
+>>>>>>> Stashed changes
     	
     }
 /* Ajouter les actions pour chaque boutton */
@@ -87,4 +118,8 @@ void choose () {
  public int getNumero() {
 	 return numero;
  }
+<<<<<<< Updated upstream
 }
+=======
+}
+>>>>>>> Stashed changes

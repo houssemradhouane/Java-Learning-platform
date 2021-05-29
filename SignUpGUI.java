@@ -17,6 +17,12 @@ import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
+/**
+ * 
+ * @author Houssem Radhouane
+ *
+ */
+
 public class SignUpGUI {
 
 	private JFrame frmSignUp;

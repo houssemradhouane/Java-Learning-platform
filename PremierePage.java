@@ -19,10 +19,13 @@ public class PremierePage extends JPanel {
          themes.setBounds(300,150,200,50);
          add(themes);
          
+<<<<<<< Updated upstream
          quitter = new JButton ("Quiter");
          quitter.setBackground(new Color(255,255,255)) ;
          quitter.setBounds(300,250,200,50);
          add(quitter);
+=======
+>>>>>>> Stashed changes
          
          window.setVisible(true);
          
@@ -34,10 +37,13 @@ void choose () {
             go = true ;
             setVisible(false);
         });
+<<<<<<< Updated upstream
        
         quitter.addActionListener((ActionEvent e) -> {
             System.exit(0);
         });
+=======
+>>>>>>> Stashed changes
         
         while (!go) {
             try {

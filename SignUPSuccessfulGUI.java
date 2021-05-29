@@ -12,6 +12,12 @@ import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
+/**
+ * 
+ * @author Houssem Radhouane
+ *
+ */
+
 public class SignUPSuccessfulGUI {
 
 	private JFrame frame;

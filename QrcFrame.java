@@ -38,14 +38,22 @@ public class QrcFrame extends JPanel {
          pan.setBackground(Color.DARK_GRAY);
          window.setContentPane(pan);
          setLayout(null);
+<<<<<<< Updated upstream
          setBackground(Color.getHSBColor(154, 254, 25));
+=======
+         setBackground(Color.LIGHT_GRAY);
+>>>>>>> Stashed changes
          setBounds(100,90,600,300);
          setBorder(BorderFactory.createLineBorder(Color.black));
          pan.add(this);
          add(questionLabel); add(answer); add(yourAnswer); add(valider);
 
          questionLabel.setBounds(40,8,520,150);
+<<<<<<< Updated upstream
          questionLabel.setBorder(new LineBorder(Color.blue, 2, true));
+=======
+         questionLabel.setBorder(new LineBorder(Color.white, 2, true));
+>>>>>>> Stashed changes
          questionLabel.setHorizontalAlignment(JLabel.CENTER);
          yourAnswer.setBounds(80,180,100,40);
          yourAnswer.setBorder(new SoftBevelBorder(SoftBevelBorder.RAISED)); 

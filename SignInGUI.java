@@ -26,6 +26,7 @@ public class SignInGUI {
 	private BaseUtilisateurs base = new BaseUtilisateurs();
 	private JLabel message;
 
+	boolean siginsucessful = false;
 	/**
 	 * Launch the application.
 	 */
@@ -97,6 +98,7 @@ public class SignInGUI {
 		btnNewButton = new JButton("Retour au menu principal");
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				LoginGUI login = new LoginGUI();
 				frmSignin.dispose();
 			}
 		});
@@ -117,6 +119,9 @@ public class SignInGUI {
 				String password = passwordField.getText();
 			      if (base.authentifier(userName, password)) {
 			         message.setText(" Hello " + userName + "");
+			         siginsucessful = true;
+			         WorkBenchGUI workbench = new WorkBenchGUI();
+			         frmSignin.dispose();
 			      } else {
 			         message.setText(" Invalid user.. ");
 			      }

@@ -1,5 +1,11 @@
 import java.awt.EventQueue;
 
+/**
+ * 
+ * @author Houssem Radhouane
+ *
+ */
+
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import java.awt.BorderLayout;
@@ -26,16 +32,15 @@ public class LoginGUI {
 	 * Launch the application.
 	 */
 	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
+//		EventQueue.invokeLater(new Runnable() {
+//			public void run() {
+//				try {
 					LoginGUI window = new LoginGUI();
-					window.frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
+//				} catch (Exception e) {
+//					e.printStackTrace();
+//				}
+//			}
+//		});
 	}
 
 	/**
@@ -53,7 +58,7 @@ public class LoginGUI {
 		frame.setResizable(false);
 		frame.setBounds(100, 100, 835, 570);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		
+		frame.setVisible(true);
 		JPanel panel = new JPanel();
 		panel.setBackground(new Color(105, 105, 105));
 		frame.getContentPane().add(panel, BorderLayout.CENTER);
@@ -83,6 +88,7 @@ public class LoginGUI {
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				SignInGUI login = new SignInGUI();
+				frame.dispose();
 			}
 		});
 		btnNewButton.setFont(new Font("Tahoma", Font.PLAIN, 22));
@@ -101,12 +107,17 @@ public class LoginGUI {
 		panel_1.add(btnCrerUnCompte);
 		
 		JButton btnQuitter = new JButton("Quitter");
+		btnQuitter.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				System.exit(0);
+			}
+		});
 		btnQuitter.setBackground(Color.LIGHT_GRAY);
 		btnQuitter.setFont(new Font("Tahoma", Font.PLAIN, 22));
 		btnQuitter.setBounds(91, 209, 210, 38);
 		panel_1.add(btnQuitter);
 		
-		JLabel lblNewLabel = new JLabel("JLP");
+		JLabel lblNewLabel = new JLabel("J7");
 		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
 		lblNewLabel.setBounds(247, 68, 309, 63);
 		layeredPane.add(lblNewLabel);
