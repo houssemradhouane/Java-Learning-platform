@@ -1,49 +1,61 @@
 import java.util.*;
 
-/** Etudiant modélise un utilisateur du jeu en mode étudiant.
- * Un étudiant est caractérisé par son identifiant et son mot de
- * passe.
- * Il garde un historique de ses activités(progrès, remarques...) et il peut être affilié à un enseignant.
+/**
+ * Etudiant modélise un utilisateur du jeu en mode étudiant. Un étudiant est
+ * caractérisé par son identifiant et son mot de passe. Il garde un historique
+ * de ses activités(progrès, remarques...) et il peut être affilié à un
+ * enseignant.
  *
- * @author  Houssem Radhouane
+ * @author Houssem Radhouane
  */
 
 public class Etudiant implements Utilisateur {
 
-       /* Identifiant de l'étudiant */
-       private String identifiant;
+	/* Identifiant de l'étudiant */
+	private String identifiant;
 
-       /* Mot de passe de l'étudiant */
-       private String mdp;
+	/* Mot de passe de l'étudiant */
+	private String mdp;
 
-       /** Construire un étudiant à partir de son identifiant et son mot de passe.
-	 * @param id identifiant
+	/* Base de données */
+	BaseUtilisateurs base = new BaseUtilisateurs();
+
+	/**
+	 * Construire un étudiant à partir de son identifiant et son mot de passe.
+	 * 
+	 * @param id    identifiant
 	 * @param motdp mot de passe
 	 */
 	public Etudiant(String id, String motdp) {
-               this.identifiant = id;
-               this.mdp = motdp;
-       }
+		this.identifiant = id;
+		this.mdp = motdp;
+	}
 
-       /** Obtenir l'identifiant de l'étudiant.
+	/**
+	 * Obtenir l'identifiant de l'étudiant.
+	 * 
 	 * @return identifiant de l'étudiant
 	 */
-       public String getIdentifiant() {
+	public String getIdentifiant() {
 		return this.identifiant;
-       }
+	}
 
-       /** Obtenir le mot de passe de l'étudiant.
+	/**
+	 * Obtenir le mot de passe de l'étudiant.
+	 * 
 	 * @return mot de passe de l'étudiant
 	 */
-       public String getMDP() {
+	public String getMDP() {
 		return this.mdp;
-       }
+	}
 
-       /** Inscrire l'étudiant à un enseignant.
-         * @param identifiant de l'enseignant
-         */
-       public void inscrire(String identifiant) {
-              if (BaseDD.utilisateurExistant(identifiant)) {
-            	  
-              }
-                 
+	/**
+	 * Poser une question à l'enseignant de l'étudiant.
+	 * 
+	 * @param identifiant de l'enseignant
+	 */
+	public void poserQuestion(String question) {
+		String ens = base.trouverEnseignant(this.getIdentifiant());
+		base.ajouterQuestion(ens, this.getIdentifiant(), question);
+	}
+}
